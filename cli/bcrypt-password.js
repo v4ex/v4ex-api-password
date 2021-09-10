@@ -10,7 +10,7 @@
  * @param {*} env (optional)
  */
 module.exports = ({ Password, mongoose, modelName, env }) => {
-  Password = Password || require('../models/password')({ mongoose, modelName }).Password
+  Password = Password || require('../models/password')({ mongoose, modelName, env }).Password
 
   const {
     bcryptPassword
