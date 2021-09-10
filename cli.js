@@ -5,6 +5,7 @@
 
 const { program } = require('commander')
 require('./cli/bcrypt-password')({})
+require('./cli/password')({})
 
 
 program.parse()
