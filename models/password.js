@@ -20,7 +20,7 @@ module.exports = ({ mongoose, modelName, env }) => {
   } else {
     const Schema = mongoose.Schema
     PasswordSchema = new Schema({
-      hash: { type: String, required: true }
+      hash: { type: String, required: true, immutable: true }
     })
     Password = mongoose.model(modelName, PasswordSchema)
   }
