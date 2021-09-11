@@ -9,8 +9,8 @@
  * @param {*} env (optional)
  */
 module.exports = ({ mongoose, modelName, env }) => {
-  if (mongoose === undefined) mongoose = require('../mongoose')({ env })
-  if (modelName === undefined) modelName = 'Password'
+  mongoose = mongoose || require('../mongoose')({ env })
+  modelName = modelName || 'Password'
 
   let Password, PasswordSchema
 
