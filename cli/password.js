@@ -1,6 +1,6 @@
 /* Copyright (c) V4EX Inc. SPDX-License-Identifier: GPL-3.0-or-later */
 
-// Purpose: Provide CLI command password to control Password in database.
+// Purpose: Provide CLI command Password to control Password in database.
 
 
 /**
@@ -18,12 +18,14 @@
     Password.base.connection.close()
   }
 
-  program.command('password')
+  program.command('Password')
          .description('control Password model in database')
          .option('--drop', 'Drop Password model collection in database')
          .action(function(options) {
            if (options.drop) {
              Password.collection.drop(done)
+           } else {
+             done()
            }
          })
 
