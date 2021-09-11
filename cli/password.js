@@ -21,7 +21,7 @@
   program.command('password')
          .description('control Password model in database')
          .option('--drop', 'Drop Password model collection in database')
-         .action((options) => {
+         .action(function(options) {
            if (options.drop) {
              Password.collection.drop(done)
            }

@@ -26,7 +26,7 @@ module.exports = ({ Password, mongoose, modelName, env }) => {
   program.command('bcrypt-password')
          .description('add new Password using bcrypt to database')
          .argument('<password>', 'Plain text password')
-         .action((plainTextPassword) => {
+         .action(function(plainTextPassword) {
            bcryptPassword(Password, plainTextPassword, (err, password) => {
              if (err) {
                console.error(chalk.red(err))
